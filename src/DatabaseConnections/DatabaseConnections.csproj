@@ -143,6 +143,7 @@
     <Compile Include="ICompactable.cs" />
     <Compile Include="IDatabaseCommandInteceptor.cs" />
     <Compile Include="IDataPopulator.cs" />
+    <Compile Include="IDbCommandBuilder.cs" />
     <Compile Include="ILastInserted.cs" />
     <Compile Include="Models\NonQueryResult.cs" />
     <Compile Include="Models\QueryResult.cs" />

@@ -3,11 +3,6 @@ using System.Linq;
 
 namespace DatabaseConnections
 {
-    public interface IDbCommandBuilder
-    {
-        IDbCommand BuildCommand(DatabaseCommand command, IDbConnection con, IDbTransaction transaction = null);
-    }
-
     public class DbCommandBuilder : IDbCommandBuilder
     {
         public IDbCommand BuildCommand(DatabaseCommand command, IDbConnection con,
