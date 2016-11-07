@@ -10,7 +10,7 @@ namespace DatabaseConnections
     {
         string ConnectionString { get; }
 
-        IList<IDatabaseCommandInteceptor> Inteceptors { get; }
+        IList<IDatabaseCommandInterceptor> Inteceptors { get; }
 
         int ExecuteNonQuery(DatabaseCommand command);
         int ExecuteNonQueries(IEnumerable<DatabaseCommand> commands);
@@ -28,7 +28,7 @@ namespace DatabaseConnections
         private readonly IDbConnection _connection;
         private readonly IDataPopulator _dataPopulator;
         private readonly IDbCommandBuilder _commandBuilder;
-        private readonly IList<IDatabaseCommandInteceptor> _inteceptors = new List<IDatabaseCommandInteceptor>();
+        private readonly IList<IDatabaseCommandInterceptor> _inteceptors = new List<IDatabaseCommandInterceptor>();
 
         protected Database(
             IDbConnection connection,
@@ -45,7 +45,7 @@ namespace DatabaseConnections
             get { return _connection.ConnectionString; }
         }
 
-        public IList<IDatabaseCommandInteceptor> Inteceptors
+        public IList<IDatabaseCommandInterceptor> Inteceptors
         {
             get { return _inteceptors; }
         }
@@ -209,7 +209,7 @@ namespace DatabaseConnections
         private void RunInterceptors(DatabaseCommand command)
         {
             foreach (var inteceptor in Inteceptors)
-                inteceptor.Intercept(this, command);
+                inteceptor.Intercept(command, this);
         }
 
         protected virtual IDbConnection OpenConnection()

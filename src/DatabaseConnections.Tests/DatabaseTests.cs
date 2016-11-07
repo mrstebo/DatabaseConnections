@@ -55,7 +55,7 @@ namespace DatabaseConnections.Tests
                 .ToArray();
             var transaction = new Mock<IDbTransaction>();
             var com = _mockRepository.CreateIDbCommand();
-            var interceptor = new Mock<IDatabaseCommandInteceptor>();
+            var interceptor = new Mock<IDatabaseCommandInterceptor>();
 
             _connection
                 .Setup(x => x.BeginTransaction(IsolationLevel.ReadCommitted))
@@ -67,8 +67,8 @@ namespace DatabaseConnections.Tests
                     transaction.Object))
                 .Returns(com.Object);
             interceptor
-                .Setup(x => x.Intercept(_database, It.Is<DatabaseCommand>(y => commands.Contains(y))))
-                .Callback((IDatabase db, DatabaseCommand command2) => command2.CommandText = "Test");
+                .Setup(x => x.Intercept(It.Is<DatabaseCommand>(y => commands.Contains(y)), _database))
+                .Callback((DatabaseCommand command2, IDatabase db) => command2.CommandText = "Test");
 
             _database.Inteceptors.Add(interceptor.Object);
 
@@ -77,7 +77,7 @@ namespace DatabaseConnections.Tests
             for (var i = 0; i < commands.Length; i++)
             {
                 var index = i;
-                interceptor.Verify(x => x.Intercept(_database, commands[index]));
+                interceptor.Verify(x => x.Intercept(commands[index], _database));
 
                 Assert.AreEqual("Test", commands[index].CommandText);
             }
@@ -199,20 +199,20 @@ namespace DatabaseConnections.Tests
         {
             var command = new DatabaseCommand();
             var com = _mockRepository.CreateIDbCommand();
-            var interceptor = new Mock<IDatabaseCommandInteceptor>();
+            var interceptor = new Mock<IDatabaseCommandInterceptor>();
 
             _commandBuilder
                 .Setup(x => x.BuildCommand(command, _connection.Object, null))
                 .Returns(com.Object);
             interceptor
-                .Setup(x => x.Intercept(_database, command))
-                .Callback((IDatabase db, DatabaseCommand command2) => command2.CommandText = "Test");
+                .Setup(x => x.Intercept(command, _database))
+                .Callback((DatabaseCommand command2, IDatabase db) => command2.CommandText = "Test");
 
             _database.Inteceptors.Add(interceptor.Object);
 
             _database.ExecuteNonQuery(command);
 
-            interceptor.Verify(x => x.Intercept(_database, command));
+            interceptor.Verify(x => x.Intercept(command, _database));
 
             Assert.AreEqual("Test", command.CommandText);
         }
@@ -295,20 +295,20 @@ namespace DatabaseConnections.Tests
         {
             var command = new DatabaseCommand();
             var com = _mockRepository.CreateIDbCommand();
-            var interceptor = new Mock<IDatabaseCommandInteceptor>();
+            var interceptor = new Mock<IDatabaseCommandInterceptor>();
 
             _connection
                 .Setup(x => x.CreateCommand())
                 .Returns(com.Object);
             interceptor
-                .Setup(x => x.Intercept(_database, command))
-                .Callback((IDatabase db, DatabaseCommand command2) => command2.CommandText = "Test");
+                .Setup(x => x.Intercept(command, _database))
+                .Callback((DatabaseCommand command2, IDatabase db) => command2.CommandText = "Test");
 
             _database.Inteceptors.Add(interceptor.Object);
 
             _database.ExecuteQuery(command);
 
-            interceptor.Verify(x => x.Intercept(_database, command));
+            interceptor.Verify(x => x.Intercept(command, _database));
 
             Assert.AreEqual("Test", command.CommandText);
         }
@@ -390,20 +390,20 @@ namespace DatabaseConnections.Tests
         {
             var command = new DatabaseCommand();
             var com = _mockRepository.CreateIDbCommand();
-            var interceptor = new Mock<IDatabaseCommandInteceptor>();
+            var interceptor = new Mock<IDatabaseCommandInterceptor>();
 
             _connection
                 .Setup(x => x.CreateCommand())
                 .Returns(com.Object);
             interceptor
-                .Setup(x => x.Intercept(_database, command))
-                .Callback((IDatabase db, DatabaseCommand command2) => command2.CommandText = "Test");
+                .Setup(x => x.Intercept(command, _database))
+                .Callback((DatabaseCommand command2, IDatabase db) => command2.CommandText = "Test");
 
             _database.Inteceptors.Add(interceptor.Object);
 
             _database.ExecuteQuery(command, 1, 1, "test");
 
-            interceptor.Verify(x => x.Intercept(_database, command));
+            interceptor.Verify(x => x.Intercept(command, _database));
 
             Assert.AreEqual("Test", command.CommandText);
         }
@@ -486,20 +486,20 @@ namespace DatabaseConnections.Tests
         {
             var command = new DatabaseCommand();
             var com = _mockRepository.CreateIDbCommand();
-            var interceptor = new Mock<IDatabaseCommandInteceptor>();
+            var interceptor = new Mock<IDatabaseCommandInterceptor>();
 
             _commandBuilder
                 .Setup(x => x.BuildCommand(command, _connection.Object, null))
                 .Returns(com.Object);
             interceptor
-                .Setup(x => x.Intercept(_database, command))
-                .Callback((IDatabase db, DatabaseCommand command2) => command2.CommandText = "Test");
+                .Setup(x => x.Intercept(command, _database))
+                .Callback((DatabaseCommand command2, IDatabase db) => command2.CommandText = "Test");
 
             _database.Inteceptors.Add(interceptor.Object);
 
             _database.ExecuteReader(command);
 
-            interceptor.Verify(x => x.Intercept(_database, command));
+            interceptor.Verify(x => x.Intercept(command, _database));
 
             Assert.AreEqual("Test", command.CommandText);
         }
@@ -583,20 +583,20 @@ namespace DatabaseConnections.Tests
         {
             var command = new DatabaseCommand();
             var com = _mockRepository.CreateIDbCommand();
-            var interceptor = new Mock<IDatabaseCommandInteceptor>();
+            var interceptor = new Mock<IDatabaseCommandInterceptor>();
 
             _commandBuilder
                 .Setup(x => x.BuildCommand(command, _connection.Object, null))
                 .Returns(com.Object);
             interceptor
-                .Setup(x => x.Intercept(_database, command))
-                .Callback((IDatabase db, DatabaseCommand command2) => command2.CommandText = "Test");
+                .Setup(x => x.Intercept(command, _database))
+                .Callback((DatabaseCommand command2, IDatabase db) => command2.CommandText = "Test");
 
             _database.Inteceptors.Add(interceptor.Object);
 
             _database.ExecuteScalar(command);
 
-            interceptor.Verify(x => x.Intercept(_database, command));
+            interceptor.Verify(x => x.Intercept(command, _database));
 
             Assert.AreEqual("Test", command.CommandText);
         }
