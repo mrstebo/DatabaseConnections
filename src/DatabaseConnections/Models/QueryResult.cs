@@ -4,6 +4,6 @@ namespace DatabaseConnections.Models
 {
     public class QueryResult
     {
-        public DataTable Data { get; set; }
+        public DataSet Data { get; set; }
     }
 }
