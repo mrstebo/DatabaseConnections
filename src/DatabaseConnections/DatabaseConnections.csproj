@@ -139,9 +139,6 @@
     <Compile Include="IDatabaseCommandInterceptor.cs" />
     <Compile Include="IDataPopulator.cs" />
     <Compile Include="IDbCommandBuilder.cs" />
-    <Compile Include="Models\NonQueryResult.cs" />
-    <Compile Include="Models\QueryResult.cs" />
-    <Compile Include="Models\ScalarResult.cs" />
     <Compile Include="DbParam.cs" />
     <Compile Include="DatabaseCommandException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
