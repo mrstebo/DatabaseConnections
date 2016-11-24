@@ -157,12 +157,8 @@
   <ItemGroup>
     <Compile Include="DatabaseTests.cs" />
     <Compile Include="DbCommandBuilderTests.cs" />
-    <Compile Include="DatabaseCommandExtensionsTests.cs" />
     <Compile Include="DatabaseExtensionsTests.cs" />
-    <Compile Include="DataReaderExtensionsTests.cs" />
-    <Compile Include="DataRowExtensionsTests.cs" />
     <Compile Include="MoqExtensions.cs" />
-    <Compile Include="DbParamConverterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

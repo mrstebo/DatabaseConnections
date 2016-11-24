@@ -130,21 +130,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbParamConverter.cs" />
     <Compile Include="DatabaseCommand.cs" />
     <Compile Include="DbCommandBuilder.cs" />
     <Compile Include="DatabaseCommandExecutedEventArgs.cs" />
     <Compile Include="DatabaseCommandExecutingEventArgs.cs" />
-    <Compile Include="DatabaseCommandExtensions.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DatabaseExtensions.cs" />
-    <Compile Include="DataReaderExtensions.cs" />
-    <Compile Include="DataRowExtensions.cs" />
-    <Compile Include="ICompactable.cs" />
     <Compile Include="IDatabaseCommandInterceptor.cs" />
     <Compile Include="IDataPopulator.cs" />
     <Compile Include="IDbCommandBuilder.cs" />
-    <Compile Include="ILastInserted.cs" />
     <Compile Include="Models\NonQueryResult.cs" />
     <Compile Include="Models\QueryResult.cs" />
     <Compile Include="Models\ScalarResult.cs" />
