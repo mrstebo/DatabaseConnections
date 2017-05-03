@@ -10,4 +10,6 @@ A wrapper around the standard IDb classes.
 
 ### DatabaseConnections.OleDb [![NuGet](https://img.shields.io/nuget/v/DatabaseConnections.OleDb.svg)](https://www.nuget.org/packages/DatabaseConnections.OleDb/)
 
+### DatabaseConnections.Postgres [![NuGet](https://img.shields.io/nuget/v/DatabaseConnections.Postgres.svg)](https://www.nuget.org/packages/DatabaseConnections.Postgres/)
+
 ### DatabaseConnections.SQLite [![NuGet](https://img.shields.io/nuget/v/DatabaseConnections.SQLite.svg)](https://www.nuget.org/packages/DatabaseConnections.SQLite/)
