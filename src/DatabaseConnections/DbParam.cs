@@ -16,8 +16,8 @@ namespace DatabaseConnections
             Value = value;
         }
 
-        public string ParameterName { get; private set; }
-        public DbType DbType { get; private set; }
-        public object Value { get; private set; }
+        public string ParameterName { get; }
+        public DbType DbType { get; }
+        public object Value { get; }
     }
 }

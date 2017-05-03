@@ -130,29 +130,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="DatabaseCommand.cs" />
-    <Compile Include="DbCommandBuilder.cs" />
     <Compile Include="DatabaseCommandExecutedEventArgs.cs" />
     <Compile Include="DatabaseCommandExecutingEventArgs.cs" />
-    <Compile Include="Database.cs" />
     <Compile Include="DatabaseExtensions.cs" />
-    <Compile Include="IDatabaseCommandInterceptor.cs" />
-    <Compile Include="IDataPopulator.cs" />
-    <Compile Include="IDbCommandBuilder.cs" />
     <Compile Include="DbParam.cs" />
-    <Compile Include="DatabaseCommandException.cs" />
+    <Compile Include="IDbConnectionWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="JRO">
-      <Guid>{AC3B8B4C-B6CA-11D1-9F31-00C04FC29D52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>6</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

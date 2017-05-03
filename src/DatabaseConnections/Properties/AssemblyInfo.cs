@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DatabaseConnections")]
 [assembly: AssemblyDescription("A wrapper around the standard IDb classes.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("EKM Systems")]
+[assembly: AssemblyCompany("mrstebo, ekmsystems")]
 [assembly: AssemblyProduct("DatabaseConnections")]
-[assembly: AssemblyCopyright("Copyright © 2016")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

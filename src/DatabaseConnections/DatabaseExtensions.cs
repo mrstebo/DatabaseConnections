@@ -4,7 +4,7 @@ namespace DatabaseConnections
 {
     public static class DatabaseExtensions
     {
-        public static int ExecuteNonQuery(this IDatabase database, string commandText, params DbParam[] parameters)
+        public static int ExecuteNonQuery(this Database database, string commandText, params DbParam[] parameters)
         {
             return database.ExecuteNonQuery(new DatabaseCommand
             {
@@ -13,7 +13,7 @@ namespace DatabaseConnections
             });
         }
 
-        public static DataSet ExecuteQuery(this IDatabase database, string commandText, params DbParam[] parameters)
+        public static DataSet ExecuteQuery(this Database database, string commandText, params DbParam[] parameters)
         {
             return database.ExecuteQuery(new DatabaseCommand
             {
@@ -22,17 +22,17 @@ namespace DatabaseConnections
             });
         }
 
-        public static DataSet ExecuteQuery(this IDatabase database, int startRecord, int maxRecords, string tableName,
+        public static DataSet ExecutePagedQuery(this Database database, int startRecord, int maxRecords, string tableName,
             string commandText, params DbParam[] parameters)
         {
-            return database.ExecuteQuery(new DatabaseCommand
+            return database.ExecutePagedQuery(new DatabaseCommand
             {
                 CommandText = commandText,
                 Parameters = parameters
             }, startRecord, maxRecords, tableName);
         }
 
-        public static object ExecuteScalar(this IDatabase database, string commandText, params DbParam[] parameters)
+        public static object ExecuteScalar(this Database database, string commandText, params DbParam[] parameters)
         {
             return database.ExecuteScalar(new DatabaseCommand
             {
@@ -41,7 +41,7 @@ namespace DatabaseConnections
             });
         }
 
-        public static IDataReader ExecuteReader(this IDatabase database, string commandText,
+        public static IDataReader ExecuteReader(this Database database, string commandText,
             params DbParam[] parameters)
         {
             return database.ExecuteReader(new DatabaseCommand
