@@ -35,6 +35,8 @@ after_build:
 
       nuget pack src\DatabaseConnections.OleDb\DatabaseConnections.OleDb.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
+      nuget pack src\DatabaseConnections.SQLite\DatabaseConnections.SQLite.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+
 test_script:
   - nuget install NUnit.ConsoleRunner -Version 3.6.1 -OutputDirectory tools
   - nuget install OpenCover -Version 4.6.519 -OutputDirectory tools
@@ -44,7 +46,7 @@ test_script:
       -register:user
       -filter:"+[*]* -[*]*Wrapper -[*.Tests]*"
       -target:"tools\NUnit.ConsoleRunner.3.6.1\tools\nunit3-console.exe"
-      -targetargs:"/domain:single src\DatabaseConnections.Tests\bin\$env:CONFIGURATION\DatabaseConnections.Tests.dll src\DatabaseConnections.OleDb.Tests\bin\$env:CONFIGURATION\DatabaseConnections.OleDb.Tests.dll"
+      -targetargs:"/domain:single src\DatabaseConnections.Tests\bin\$env:CONFIGURATION\DatabaseConnections.Tests.dll src\DatabaseConnections.OleDb.Tests\bin\$env:CONFIGURATION\DatabaseConnections.OleDb.Tests.dll src\DatabaseConnections.SQLite.Tests\bin\$env:CONFIGURATION\DatabaseConnections.SQLite.Tests.dll"
       -output:opencoverCoverage.xml
 
       $coveralls = (Resolve-Path "tools/coveralls.net.*/tools/csmacnz.coveralls.exe").ToString()
