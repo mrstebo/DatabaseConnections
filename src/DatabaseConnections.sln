@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections", "Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.Tests", "DatabaseConnections.Tests\DatabaseConnections.Tests.csproj", "{9B0ECD25-AB98-424B-AB8B-A96E5DF612A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4D6C70C5-E64F-40FB-B317-A06B063F4B46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,5 +76,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B0ECD25-AB98-424B-AB8B-A96E5DF612A5} = {4D6C70C5-E64F-40FB-B317-A06B063F4B46}
 	EndGlobalSection
 EndGlobal
