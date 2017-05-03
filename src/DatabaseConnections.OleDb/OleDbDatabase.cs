@@ -5,7 +5,12 @@ namespace DatabaseConnections.OleDb
     public class OleDbDatabase : Database
     {
         public OleDbDatabase(OleDbConnection connection) 
-            : base(new OleDbConnectionWrapper(connection))
+            : this(new OleDbConnectionWrapper(connection))
+        {
+        }
+
+        internal OleDbDatabase(IDbConnectionWrapper connection)
+            : base(connection)
         {
         }
     }
