@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.SQLite"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.SQLite.Tests", "DatabaseConnections.SQLite.Tests\DatabaseConnections.SQLite.Tests.csproj", "{FCB180D8-A240-41E8-9BF5-9D1E7537CF21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.Postgres", "DatabaseConnections.Postgres\DatabaseConnections.Postgres.csproj", "{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +179,30 @@ Global
 		{FCB180D8-A240-41E8-9BF5-9D1E7537CF21}.Test|x64.Build.0 = Release|Any CPU
 		{FCB180D8-A240-41E8-9BF5-9D1E7537CF21}.Test|x86.ActiveCfg = Release|Any CPU
 		{FCB180D8-A240-41E8-9BF5-9D1E7537CF21}.Test|x86.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Debug|x64.Build.0 = Debug|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Release|x64.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Release|x64.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Release|x86.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.TeamCity|Any CPU.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.TeamCity|Any CPU.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.TeamCity|x64.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.TeamCity|x64.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.TeamCity|x86.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.TeamCity|x86.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Test|Any CPU.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Test|x64.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Test|x64.Build.0 = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Test|x86.ActiveCfg = Release|Any CPU
+		{BC81CA50-1B5A-4AE1-A721-AE8AD69D0148}.Test|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
