@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.OleDb",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.OleDb.Tests", "DatabaseConnections.OleDb.Tests\DatabaseConnections.OleDb.Tests.csproj", "{7505EE85-1FA6-47FA-85F6-C23FC1BE2AA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnections.SQLite", "DatabaseConnections.SQLite\DatabaseConnections.SQLite.csproj", "{E30A7882-E4B2-4DB7-B638-F46F95AC809B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,30 @@ Global
 		{7505EE85-1FA6-47FA-85F6-C23FC1BE2AA5}.Test|x64.Build.0 = Release|Any CPU
 		{7505EE85-1FA6-47FA-85F6-C23FC1BE2AA5}.Test|x86.ActiveCfg = Release|Any CPU
 		{7505EE85-1FA6-47FA-85F6-C23FC1BE2AA5}.Test|x86.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Debug|x64.Build.0 = Debug|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Debug|x86.Build.0 = Debug|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Release|x64.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Release|x64.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Release|x86.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Release|x86.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.TeamCity|Any CPU.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.TeamCity|Any CPU.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.TeamCity|x64.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.TeamCity|x64.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.TeamCity|x86.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.TeamCity|x86.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Test|Any CPU.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Test|x64.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Test|x64.Build.0 = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Test|x86.ActiveCfg = Release|Any CPU
+		{E30A7882-E4B2-4DB7-B638-F46F95AC809B}.Test|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
