@@ -33,8 +33,6 @@ after_build:
   - cmd: >-
       nuget pack src\DatabaseConnections\DatabaseConnections.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
-      nuget pack src\DatabaseConnections.OleDb\DatabaseConnections.OleDb.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
-
       nuget pack src\DatabaseConnections.Postgres\DatabaseConnections.Postgres.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
       nuget pack src\DatabaseConnections.SQLite\DatabaseConnections.SQLite.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
@@ -48,7 +46,7 @@ test_script:
       -register:user
       -filter:"+[*]* -[*]*Wrapper -[*.Tests]*"
       -target:"tools\NUnit.ConsoleRunner.3.6.1\tools\nunit3-console.exe"
-      -targetargs:"/domain:single src\DatabaseConnections.Tests\bin\$env:CONFIGURATION\DatabaseConnections.Tests.dll src\DatabaseConnections.OleDb.Tests\bin\$env:CONFIGURATION\DatabaseConnections.OleDb.Tests.dll src\DatabaseConnections.Postgres.Tests\bin\$env:CONFIGURATION\DatabaseConnections.Postgres.Tests.dll src\DatabaseConnections.SQLite.Tests\bin\$env:CONFIGURATION\DatabaseConnections.SQLite.Tests.dll"
+      -targetargs:"/domain:single src\DatabaseConnections.Tests\bin\$env:CONFIGURATION\DatabaseConnections.Tests.dll src\DatabaseConnections.Postgres.Tests\bin\$env:CONFIGURATION\DatabaseConnections.Postgres.Tests.dll src\DatabaseConnections.SQLite.Tests\bin\$env:CONFIGURATION\DatabaseConnections.SQLite.Tests.dll"
       -output:opencoverCoverage.xml
 
       $coveralls = (Resolve-Path "tools/coveralls.net.*/tools/csmacnz.coveralls.exe").ToString()
