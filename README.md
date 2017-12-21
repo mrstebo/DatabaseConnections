@@ -6,9 +6,10 @@ A wrapper around the standard IDb classes.
 [![Coverage Status](https://coveralls.io/repos/github/mrstebo/DatabaseConnections/badge.svg?branch=master)](https://coveralls.io/github/mrstebo/DatabaseConnections?branch=master)
 [![NuGet](https://img.shields.io/nuget/v/DatabaseConnections.svg)](https://www.nuget.org/packages/DatabaseConnections/)
 
-The base implementation has wrappers around:
+The base implementation has the following:
 
-- `OleDbConnection`
+- `OleDbDatabase`
+- `OdbcDatabase`
 
 ## Database Implementations
 
