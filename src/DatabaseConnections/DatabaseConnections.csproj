@@ -137,6 +137,8 @@
     <Compile Include="DatabaseExtensions.cs" />
     <Compile Include="DbParam.cs" />
     <Compile Include="IDbConnectionWrapper.cs" />
+    <Compile Include="OleDb\OleDbConnectionWrapper.cs" />
+    <Compile Include="OleDb\OleDbDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
