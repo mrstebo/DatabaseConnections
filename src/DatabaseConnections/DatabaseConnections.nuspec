@@ -12,6 +12,6 @@
     <description>$description$</description>
     <releaseNotes></releaseNotes>
     <copyright></copyright>
-    <tags>database connections idbconnection</tags>
+    <tags>database connections idbconnection oledbconnection odbcconnection</tags>
   </metadata>
 </package>
