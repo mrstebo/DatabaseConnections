@@ -1,18 +1,18 @@
-﻿using System.Data.OleDb;
-using DatabaseConnections.OleDb;
+﻿using System.Data.Odbc;
+using DatabaseConnections.Odbc;
 using NUnit.Framework;
 
-namespace DatabaseConnections.Tests.OleDb
+namespace DatabaseConnections.Tests.Odbc
 {
     [TestFixture]
     [Parallelizable]
-    public class OleDbDatabaseTests
+    public class OdbcDatabaseTests
     {
         [Test]
         public void Constructor_ShouldNot_ThrowException()
         {
             // ReSharper disable once ObjectCreationAsStatement
-            Assert.DoesNotThrow(() => new OleDbDatabase(new OleDbConnection()));
+            Assert.DoesNotThrow(() => new OdbcDatabase(new OdbcConnection()));
         }
     }
 }
